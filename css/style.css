@@ -11,3 +11,79 @@
     --colores-planos-color-rojo: #b14e6f;
     --colores-planos-color-verde: #8be9bc;
 }
+/* Botones */
+.btn {
+    padding: 20px 38px;
+    border-radius: 8px;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(
+        107deg,
+        #7d7c7e 2.31%,
+        #541154 58.58%,
+        #361059 97.68%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1726px;
+    height: 971px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.6);
+
+    padding: 30px 200px 100px 200px;
+    display: grid;
+    column-gap: 100px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    & .izquierda {
+        display: grid;
+        grid-template-columns: [boton1]auto [boton2]auto [sobrante]1fr;
+        grid-template-rows: [nav]1fr [titular]auto [parrafo]auto [botones]auto;
+        column-gap: 30px;
+        & .izquierda__btndemo {
+            grid-column: boton1;
+            grid-row: botones;
+            background: #000;
+            color: #fff;
+        }
+        & .izquierda__btncall {
+            grid-column: boton2;
+            grid-row: botones;
+            background: var(--colores-planos-color-verde, #8be9bc);
+            color: #000;
+        }
+    }
+
+    & .derecha {
+        display: grid;
+        grid-template-columns: [todo]1fr;
+        grid-template-rows: [botones]auto [formulario]1fr;
+        row-gap: 50px;
+        & .derecha__botones {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 20px;
+            & .derecha__btndemo {
+                background: #000;
+                color: #fff;
+            }
+            & .derecha__btncall {
+                background: var(--colores-planos-color-verde, #8be9bc);
+                color: #000;
+            }
+        }
+        & .derecha__formulario {
+            grid-column: todo;
+            grid-row: formulario;
+            border-radius: 30px;
+            background: var(--colores-planos-color-gris, #dcdcdc);
+        }
+    }
+}
