@@ -1,0 +1,13 @@
+@import url(reset.css);
+
+/* VARIABLES */
+:root {
+    /* colores */
+    --colores-degrados-color-gris: #7f7e7f;
+    --colores-degrados-color-morano: #5f134d;
+    --colores-degrados-color-violeta: #331160;
+    --colores-planos-color-blanco: #f9eff7;
+    --colores-planos-color-gris: #dcdcdc;
+    --colores-planos-color-rojo: #b14e6f;
+    --colores-planos-color-verde: #8be9bc;
+}
