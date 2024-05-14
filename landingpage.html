@@ -11,17 +11,143 @@
         <div class="container">
             <!-- Zona Izquierda -->
             <section class="izquierda">
-                    <a href="" class="izquierda__btndemo btn" >Demo</a>
-                    <a href="" class="izquierda__btncall btn">Call</a>
+                <!-- menu -->
+                <nav class="izquierda__menu">
+                    <img src="img/logo.svg" alt="" class="izquierda__logo" />
+                    <a href="izquierda__about">About</a>
+                    <a href="izquierda__features">Features</a>
+                    <a href="izquierda__blog">Blog</a>
+                </nav>
+                <!-- titulo y texto -->
+                <h3 class="izquierda__titulo">
+                    Kyros takes the headache out of
+                    <span class="izquierda__rojo"><br />AML compliance</span>
+                </h3>
+                <p class="izquierda__parrafo">
+                    Kyros is a complete KYC and AML cloud-based solution, with
+                    native API support. Multiple sources, one simple dashboard.
+                    Onboard and monitor users with ease. It sounds too good to
+                    be true- discover why it's not.
+                </p>
+                <a href="" class="izquierda__btndemo btn">Try Demo</a>
+                <a href="" class="izquierda__btncall btn">Talk to sales</a>
             </section>
             <!-- Zona Derecha -->
             <section class="derecha">
                 <section class="derecha__botones">
                     <a href="derecha__login">login</a>
-                    <a href="" class="derecha__btndemo btn">Demo</a>
-                    <a href="" class="derecha__btncall btn">Call</a>
+                    <a href="" class="derecha__btndemo btn">Try Demo</a>
+                    <a href="" class="derecha__btncall btn">Talk to sales</a>
                 </section>
-                <form action="" class="derecha__formulario"></form>
+                <form
+                    action="formulario.php"
+                    method="get"
+                    class="derecha__formulario"
+                >
+                    <h5>Book a 20 minutes discovery call now</h5>
+                    <input
+                        type="text"
+                        name="nombre"
+                        id="nombre"
+                        placeholder="nombre"
+                        required
+                        autofocus
+                        pattern="[A-Za-z]{2,20}"
+                    />
+                    <input
+                        type="text"
+                        name="apellidos"
+                        id="apellidos"
+                        placeholder="apellidos"
+                        pattern="[A-Za-z]{2,40}"
+                    />
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="email"
+                        maxlength="50"
+                        required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    />
+                    <input
+                        type="tel"
+                        name="telefono"
+                        id="telefono"
+                        placeholder="teléfono"
+                        pattern="[0-9]{9,20}"
+                    />
+                    <input
+                        type="text"
+                        name="empresa"
+                        id="empresa"
+                        placeholder="empresa"
+                        pattern="[A-Za-z]{2,30}"
+                    />
+                    <input
+                        type="text"
+                        name="cargo"
+                        id="cargo"
+                        placeholder="cargo en la empresa"
+                        pattern="[A-Za-z]{2,15}"
+                    />
+                    <!-- select de los paises europeos -->
+                    <select name="pais" id="">
+                        <option value="albania">Albania</option>
+                        <option value="alemania">Alemania</option>
+                        <option value="andorra">Andorra</option>
+                        <option value="austria">Austria</option>
+                        <option value="bielorrusia">Bielorrusia</option>
+                        <option value="belgica">Bélgica</option>
+                        <option value="bosnia-herzegovina">
+                            Bosnia y Herzegovina
+                        </option>
+                        <option value="bulgaria">Bulgaria</option>
+                        <option value="croacia">Croacia</option>
+                        <option value="chipre">Chipre</option>
+                        <option value="dinamarca">Dinamarca</option>
+                        <option value="eslovaquia">Eslovaquia</option>
+                        <option value="eslovenia">Eslovenia</option>
+                        <option value="espana">España</option>
+                        <option value="estonia">Estonia</option>
+                        <option value="finlandia">Finlandia</option>
+                        <option value="francia">Francia</option>
+                        <option value="grecia">Grecia</option>
+                        <option value="hungria">Hungría</option>
+                        <option value="irlanda">Irlanda</option>
+                        <option value="islandia">Islandia</option>
+                        <option value="italia">Italia</option>
+                        <option value="letonia">Letonia</option>
+                        <option value="liechtenstein">Liechtenstein</option>
+                        <option value="lituania">Lituania</option>
+                        <option value="luxemburgo">Luxemburgo</option>
+                        <option value="malta">Malta</option>
+                        <option value="moldavia">Moldavia</option>
+                        <option value="monaco">Mónaco</option>
+                        <option value="montenegro">Montenegro</option>
+                        <option value="noruega">Noruega</option>
+                        <option value="paises-bajos">Países Bajos</option>
+                        <option value="polonia">Polonia</option>
+                        <option value="portugal">Portugal</option>
+                        <option value="reino-unido">Reino Unido</option>
+                        <option value="republica-checa">República Checa</option>
+                        <option value="rumania">Rumania</option>
+                        <option value="rusia">Rusia</option>
+                        <option value="san-marino">San Marino</option>
+                        <option value="serbia">Serbia</option>
+                        <option value="suecia">Suecia</option>
+                        <option value="suiza">Suiza</option>
+                        <option value="turquia">Turquía</option>
+                        <option value="ucrania">Ucrania</option>
+                        <option value="vaticano">Vaticano</option>
+                    </select>
+                    <textarea
+                        name=""
+                        id=""
+                        placeholder="escribe tu mensaje"
+                    ></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
             </section>
         </div>
     </body>

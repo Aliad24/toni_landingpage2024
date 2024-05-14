@@ -1,4 +1,6 @@
 @import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap');
 
 /* VARIABLES */
 :root {
@@ -10,7 +12,25 @@
     --colores-planos-color-gris: #dcdcdc;
     --colores-planos-color-rojo: #b14e6f;
     --colores-planos-color-verde: #8be9bc;
+    /* numbers */
+    --size-size-1: 0.25rem;
+    --size-size-2: 0.5rem;
+    --size-size-3: 0.75rem;
+    --size-size-4: 1rem;
+    --size-size-5: 1.25rem;
+    --size-size-6: 1.5rem;
+    --size-size-7: 1.75rem;
+    --size-size-8: 2rem;
+    --size-size-9: 2.25rem;
+    --size-size-10: 2.5rem;
+    --size-size-11: 2.75rem;
+    --size-size-12: 3rem;
+    --size-size-13: 3.25rem;
+    --size-size-14: 3.5rem;
+    --size-size-15: 3.75rem;
+    --size-size-16: 4rem;
 }
+
 /* Botones */
 .btn {
     padding: 20px 38px;
@@ -25,9 +45,14 @@ body {
         #541154 58.58%,
         #361059 97.68%
     );
+    font-family: "Source Sans 3", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+a{
+    font-family: "Source Sans 3", sans-serif;
+    color: #000;
 }
 
 .container {
@@ -38,14 +63,43 @@ body {
 
     padding: 30px 200px 100px 200px;
     display: grid;
-    column-gap: 100px;
+    column-gap: 130px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     & .izquierda {
         display: grid;
         grid-template-columns: [boton1]auto [boton2]auto [sobrante]1fr;
-        grid-template-rows: [nav]1fr [titular]auto [parrafo]auto [botones]auto;
+        grid-template-rows: [nav]1fr [titular]auto [parrafo]auto [botones]auto [vacio]50px;
         column-gap: 30px;
+        row-gap: 50px;
+        align-items: start;
+        /* Menu */
+        & .izquierda__menu {
+            grid-column: boton1 / sobrante;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        & .izquierda__titulo {
+            grid-column: 1 / -1;
+            grid-row: titular / parrafo;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: var(--size-size-15);
+            font-weight: 500;
+
+            & .izquierda__rojo {
+                color: var(--colores-planos-color-rojo, #b14e6f);
+            }
+        }
+        & .izquierda__parrafo {
+            grid-column: 1 / -1;
+            grid-row: parrafo / botones;
+            font-size: var(--size-size-5);
+            font-weight: 400;
+        }
+
+        /* Botones */
         & .izquierda__btndemo {
             grid-column: boton1;
             grid-row: botones;
