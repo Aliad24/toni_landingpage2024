@@ -1,6 +1,6 @@
 @import url(reset.css);
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap");
 
 /* VARIABLES */
 :root {
@@ -37,6 +37,11 @@
     border-radius: 8px;
 }
 
+.rojo {
+    color: var(--colores-planos-color-rojo, #b14e6f);
+    font-weight: 900;
+}
+
 body {
     height: 100vh;
     background: linear-gradient(
@@ -50,9 +55,26 @@ body {
     justify-content: center;
     align-items: center;
 }
-a{
+a {
     font-family: "Source Sans 3", sans-serif;
     color: #000;
+}
+input,
+select,
+textarea {
+    border: 1px solid var(--colores-degrados-color-gris);
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+}
+input:hover {
+    border: 3px solid var(--colores-degrados-color-morano);
+}
+
+::placeholder,
+.placeholder {
+    color: #b2b2b2;
+    font-style: italic;
 }
 
 .container {
@@ -87,10 +109,6 @@ a{
             font-family: "Space Grotesk", sans-serif;
             font-size: var(--size-size-15);
             font-weight: 500;
-
-            & .izquierda__rojo {
-                color: var(--colores-planos-color-rojo, #b14e6f);
-            }
         }
         & .izquierda__parrafo {
             grid-column: 1 / -1;
@@ -134,10 +152,90 @@ a{
             }
         }
         & .derecha__formulario {
+            padding: 30px;
             grid-column: todo;
             grid-row: formulario;
             border-radius: 30px;
             background: var(--colores-planos-color-gris, #dcdcdc);
+            display: grid;
+            grid-template-columns: [izquierda]1fr [derecha]1fr;
+            grid-template-rows: [titulo]auto [nombreapellidos]60px [emailphone]60px [empresacargo]60px [nacionalidad]60px [mensaje]1fr [boton]60px;
+            gap: 20px;
+            /* input que necesitan todo el espacio */
+            & .derecha__titulo,
+            & select,
+            & textarea,
+            & button {
+                grid-column: 1 / -1;
+            }
+
+            & .derecha__titulo {
+                grid-row: titulo;
+                font-size: var(--size-size-5);
+                font-weight: 400;
+                justify-self: center;
+                align-self: center;
+            }
+            & select {
+                grid-row: nacionalidad;
+            }
+            & textarea {
+                grid-row: mensaje;
+            }
+            & button {
+                grid-row: boton;
+                background-color: var(--colores-planos-color-verde);
+                cursor: pointer;
+            }
+            & button:hover {
+                background-color: var(--colores-degrados-color-morano);
+                color: #fff;
+            }
         }
     }
+}
+
+/* iconos de formulario */
+/* .derecha__formulario section{
+    display: flex;
+    justify-content: space-between;
+    
+    & img{
+        background-color: #fff;
+        border: 1px solid grey;
+        border-right: 0;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        width: 40px;
+        padding-left: 15px;
+    }
+    & input{
+        background-color: #fff;
+        border: 1px solid grey;
+        border-left: 0;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        width: 100%;
+    }
+
+} */
+
+input:nth-child(4) {
+    background: #fff url("../img/email.svg") no-repeat 8px center;
+    padding: 0 40px;
+}
+
+input:nth-child(5) {
+    background: #fff url("../img/phone.svg") no-repeat 8px center;
+    padding: 0 40px;
+}
+
+input:nth-child(6) {
+    background: #fff url("../img/business.svg") no-repeat 8px center;
+    padding: 0 40px;
+}
+
+input:nth-child(7) {
+    background: #fff url("../img/work.svg") no-repeat 8px center;
+    padding: 0 40px;
 }
