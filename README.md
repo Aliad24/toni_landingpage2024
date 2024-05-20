@@ -39,3 +39,9 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT. Puedes ver el archivo [LICENSE](LICENSE) para más detalles.
+
+
+# COMENTARIOS DE LUIS
+-Los iconos en los inputs han sido insertados como pseudoelementos, en este caso nth-child, en donde se han agregado como BACKGROUND.
+-Se han asiganado algunas propiedades y valores para adaptarlo y que quede mejor visualmente.
+-Las propiedades utilizadas para darle el resultado han sido ademas de la ubicación del directorio por supuesto, han sido un poco de espacio entre los elementos dentro del input (8px), center para ubicar el elemennte en el centro y algo de padding.
