@@ -39,3 +39,9 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT. Puedes ver el archivo [LICENSE](LICENSE) para más detalles.
+
+# COMENTARIOS DE TIBOR - Descripcion del proceso de creacion y colocacion de iconos
+1. Hemos accedido a cada elemento input cuales queremos que tengan un icono con pseudoelemento :nth-child(n) 
+2. Los iconos estan en la carpeta 'svg' en forma de imagen SVG. Los iconos se visualizan como el fondo de la caja o elemento input, con css propiedad background.
+3. Se ha utilizado el mismo color que tiene el elemento padre input - blanco #fff, luego llamamos la URL relativa de la imagen SVG, por ejemplo "../img/business.svg" accediendo al icono. Le ponemos que no se repita, lo colocamos con el tamano 8px del borde izquierda y lo centramos con 'center'. Ademas de esto, le ponemos el padding de arriba/abajo de 0, y de izquierda y derecha 40px.
+4. Observamos nuestro trabajo y seamos felices.
